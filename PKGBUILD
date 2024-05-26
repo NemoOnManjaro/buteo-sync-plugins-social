@@ -3,7 +3,7 @@
 
 pkgname=buteo-sync-plugins-social
 pkgver=0.4.21
-pkgrel=1
+pkgrel=2
 pkgdesc="Syncs contact data from CardDAV services"
 arch=('x86_64' 'aarch64')
 url="https://github.com/sailfishos/buteo-sync-plugins-social"
@@ -11,7 +11,7 @@ license=('BSD-3-Clause')
 depends=('libsocialcache'
 	'buteo-syncfw'
 	'qtcontacts-sqlite'
-	'mlite'
+	'mlite6'
 	'qt5-pim'
 	'mkcal'
 	'kcalendarcore'
