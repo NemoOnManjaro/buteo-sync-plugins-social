@@ -3,22 +3,22 @@
 
 pkgname=buteo-sync-plugins-social
 pkgver=0.4.21
-pkgrel=2
+pkgrel=1
 pkgdesc="Syncs contact data from CardDAV services"
 arch=('x86_64' 'aarch64')
 url="https://github.com/sailfishos/buteo-sync-plugins-social"
 license=('BSD-3-Clause')
 depends=('libsocialcache'
-	'buteo-syncfw'
-	'qtcontacts-sqlite'
-	'mlite6'
-	'qt5-pim'
-	'mkcal'
-	'kcalendarcore>=6.0'
-	'libaccounts-qt'
-	'nemo-qml-plugin-notifications')
+    'buteo-syncfw'
+    'qtcontacts-sqlite'
+    'mlite6'
+    'qt6-pim'
+    'mkcal6'
+    'kcalendarcore>=6.0'
+    'libaccounts-qt6'
+    'nemo-qml-plugin-notifications')
 
-makedepends=('qt5-tools')
+makedepends=('qt6-tools')
 source=("${url}/archive/refs/tags/$pkgver.tar.gz"
     "0001-fix_build.patch")
 sha256sums=('7b7bebbe855a0347ef9b6fc3e794e8ced1ed37c203db4e107cc309dfc5f448a6'
@@ -31,7 +31,7 @@ prepare() {
 
 build() {
   cd $pkgname-$pkgver
-  qmake-qt5 \
+  qmake6 \
     "CONFIG+=dropbox" \
     "CONFIG+=facebook" \
     "CONFIG+=google" \
